@@ -1,59 +1,74 @@
 body {
-  background: #bed3e4;
+  background: #333;
 }
 
 section {
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   border: 5px solid;
   box-sizing: border-box;
   position: relative;
 }
 
 header{
+  height: auto;
   background:#ebe7e0;
-  /*display: flex;
   justify-content: center;
-  align-items: center;*/
+  align-items: center;
 }
 
-header > img {
-  height: 150px;
-  margin-left: 50px;
+header>nav>a>img {
+  height: 100px;
+  object-fit: contain;
 }
 
 nav {
   background: #ebe7e0;
-  padding: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-nav a {
+nav a , nav button {
   text-decoration: none;
   color: #333; /* Color del texto */
-  margin: 0 10px;
-  padding: 5px;
-  border-radius: 5px;
-  position: relative; /* Añadido para posicionar el contenedor relativo a la etiqueta */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  min-width: 100px;
+  position: relative;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 
 nav a::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px; /* Altura de la línea debajo de la etiqueta */
+  height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #333;
-  transform: scaleX(0); /* Inicialmente, la línea no está visible */
-  transform-origin: bottom right;
-  transition: transform 0.3s ease; /* Añadido para una animación suave */
+  background-color: #cf0303;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.5s ease;
 }
 
 nav a:hover::after {
-  transform: scaleX(1); /* Hace que la línea se expanda al pasar el ratón sobre la etiqueta */
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+nav a.logo-link::after {
+  /* Evitar la línea debajo de la imagen */
+  display: none;
+}
+
+nav a:first-child {
+  min-width: 250px;
+  padding: 10px 10%;
 }
 
 nav > button {
@@ -100,9 +115,20 @@ button:hover div:nth-child(3) {
   transform: rotate(-45deg);
 }
 
+.background {
+  height: 250px; /* Ajusta la altura según tus necesidades */
+  width: 100%; /* Hace que el ancho sea del 100% del contenedor */
+  background-image: url('../images/cover.jpg'); /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen */
+  background-size: cover;
+  /*background-position: center;*/
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  overflow: hidden;
+  /*background-attachment: fixed;*/
+}
+
 .content1 {
-  width: 200px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background: aquamarine;
   padding: 10px;
   border: 4px solid red;
@@ -116,7 +142,7 @@ button:hover div:nth-child(3) {
 }
 
 .content2 {
-  width: 200px;
+  width: 100px;
   height: 150px;
   background: aquamarine;
   padding: 10px;
