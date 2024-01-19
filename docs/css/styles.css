@@ -1,5 +1,5 @@
 body {
-  background: #333;
+  background: #ebe7e0;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
@@ -12,9 +12,8 @@ section {
   position: relative;
 }
 
-header{
-  height: auto;
-  background:#ebe7e0;
+header {
+  background: #ebe7e0;
   justify-content: center;
   align-items: center;
 }
@@ -32,16 +31,18 @@ nav {
   flex-wrap: wrap;
 }
 
-nav{
-  height: 150px;
+nav {
+  height: auto;
   background-color: #555;
   display: flex;
   align-items: center;
 }
 
-nav a , nav button {
+nav a,
+nav button {
   text-decoration: none;
-  color: #333; /* Color del texto */
+  color: #333;
+  /* Color del texto */
   justify-content: center;
   align-items: center;
   display: flex;
@@ -80,7 +81,7 @@ nav a:first-child {
   padding: 10px 10%;
 }
 
-nav > button {
+nav>button {
   background: #333;
   color: #fff;
   padding: 8px 15px;
@@ -90,7 +91,8 @@ nav > button {
 }
 
 button:hover {
-  background: #555; /* Cambio de color al pasar el ratón sobre el botón */
+  background: #555;
+  /* Cambio de color al pasar el ratón sobre el botón */
 }
 
 button {
@@ -125,12 +127,16 @@ button:hover div:nth-child(3) {
 }
 
 .background {
-  height: 250px; /* Ajusta la altura según tus necesidades */
-  width: 100%; /* Hace que el ancho sea del 100% del contenedor */
-  background-image: url('../images/cover.jpg'); /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen */
+  height: 250px;
+  /* Ajusta la altura según tus necesidades */
+  width: 100%;
+  /* Hace que el ancho sea del 100% del contenedor */
+  background-image: url('../images/cover.jpg');
+  /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen */
   background-size: cover;
   /*background-position: center;*/
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
   overflow: hidden;
   /*background-attachment: fixed;*/
 }
@@ -165,27 +171,24 @@ button:hover div:nth-child(3) {
 }
 
 footer {
-  background:#ebe7e0;
+  background: #ebe7e0;
   width: auto;
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
 }
 
-.footer>div>h3{
-  display: inline-block;
-  border-bottom: 2px solid #000; /* Ajusta el grosor y el color según tus necesidades */
-  padding-bottom: 5px; /
-}
-
-.fotter-img{
-  display: flex; /* Agrega display: flex para centrar la imagen */
-  align-items: center; /* Centra verticalmente dentro de footer > div */
-  justify-content: center; /* Centra horizontalmente dentro de footer > div */
+.fotter-img {
+  display: flex;
+  /* Agrega display: flex para centrar la imagen */
+  align-items: center;
+  /* Centra verticalmente dentro de footer > div */
+  justify-content: center;
+  /* Centra horizontalmente dentro de footer > div */
   object-fit: contain;
 }
 
-footer > div {
+footer>div {
   min-width: 250px;
   height: auto;
   flex: 1;
@@ -193,7 +196,7 @@ footer > div {
   padding: 15px;
 }
 
-footer > div > img {
+footer>div>img {
   max-width: 100%;
   max-height: 100%;
   width: auto;
@@ -201,34 +204,48 @@ footer > div > img {
   min-width: 250px;
 }
 
-.footer{
+.footer {
   font-size: medium;
   background: #ebe7e0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer>div>ul>li{
-  list-style-type: none; 
+.footer>div>h3,
+.footer>div>div>h3 {
+  display: inline-block;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;/
+}
+
+.footer>div>ul>li {
+  list-style-type: none;
   margin-bottom: 10px;
   margin-left: 1rem;
   color: #333;
 }
 
-.footer > div{
-  width: auto;
-  height: auto;
-  flex: 1; 
+.footer>div {
+  flex: 1;
   min-width: 250px;
   text-align: center;
 }
 
-.footer>div>ul>li{
+.footer>div>ul>li {
   text-align: start;
 }
 
+.footer div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+}
+
 .social-icon {
-  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-icon img {
@@ -237,7 +254,7 @@ footer > div > img {
   margin: 10px;
 }
 
-h6{
+h6 {
   text-align: center;
   font-size: small;
 }
