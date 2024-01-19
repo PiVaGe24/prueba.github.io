@@ -1,5 +1,7 @@
 body {
   background: #333;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 section {
@@ -28,6 +30,13 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+nav{
+  height: 150px;
+  background-color: #555;
+  display: flex;
+  align-items: center;
 }
 
 nav a , nav button {
@@ -163,6 +172,12 @@ footer {
   padding: 15px;
 }
 
+.footer>div>h3{
+  display: inline-block;
+  border-bottom: 2px solid #000; /* Ajusta el grosor y el color según tus necesidades */
+  padding-bottom: 5px; /
+}
+
 .fotter-img{
   display: flex; /* Agrega display: flex para centrar la imagen */
   align-items: center; /* Centra verticalmente dentro de footer > div */
@@ -184,4 +199,45 @@ footer > div > img {
   width: auto;
   height: auto;
   min-width: 250px;
+}
+
+.footer{
+  font-size: medium;
+  background: #ebe7e0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer>div>ul>li{
+  list-style-type: none; 
+  margin-bottom: 10px;
+  margin-left: 1rem;
+  color: #333;
+}
+
+.footer > div{
+  width: auto;
+  height: auto;
+  flex: 1; 
+  min-width: 250px;
+  text-align: center;
+}
+
+.footer>div>ul>li{
+  text-align: start;
+}
+
+.social-icon {
+  padding: 2rem;
+}
+
+.social-icon img {
+  width: 32px;
+  height: 32px;
+  margin: 10px;
+}
+
+h6{
+  text-align: center;
+  font-size: small;
 }
