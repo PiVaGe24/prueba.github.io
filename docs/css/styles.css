@@ -21,6 +21,7 @@ header {
 header>nav>a>img {
   height: 100px;
   object-fit: contain;
+  padding: 10px 0;
 }
 
 nav {
@@ -30,19 +31,10 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
 }
-
-nav {
-  height: auto;
-  background-color: #555;
-  display: flex;
-  align-items: center;
-}
-
 nav a,
 nav button {
   text-decoration: none;
   color: #333;
-  /* Color del texto */
   justify-content: center;
   align-items: center;
   display: flex;
@@ -52,7 +44,6 @@ nav button {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-
 nav a::after {
   content: "";
   position: absolute;
@@ -60,10 +51,10 @@ nav a::after {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #cf0303;
+  background-color: #333;
   transform: scaleX(0);
   transform-origin: bottom center;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-out;
 }
 
 nav a:hover::after {
@@ -72,13 +63,11 @@ nav a:hover::after {
 }
 
 nav a.logo-link::after {
-  /* Evitar la línea debajo de la imagen */
   display: none;
 }
 
 nav a:first-child {
   min-width: 250px;
-  padding: 10px 10%;
 }
 
 nav>button {
@@ -105,41 +94,78 @@ button {
   gap: .65rem;
 }
 
-button>div {
-  background: black;
-  height: 2px;
-  width: 100%;
+.content-startOrdering{
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/home.webp');
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+}
+
+.content-startOrdering h1{
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.content-startOrdering div,
+.content-startOrdering button{
+  box-sizing: border-box;
+  width: 300px;
+  font-size: 1.2rem;
+  color: white;
+  justify-content: space-between;
+  gap: 20px;
+  line-height: .8;
+}
+
+
+.content-startOrdering>div>button:hover,
+.content-startOrdering button:hover{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.content-startOrdering button{
+  outline: 1px solid #e3e3e3;
   border-radius: 5px;
-  transition: all .5s;
-  transform-origin: left;
+  justify-content: center;
+  align-items: center;
 }
 
-button:hover div:first-child {
-  transform: rotate(45deg);
+.btn_home{
+  height: auto;
+  width: auto;
+  align-items: center;
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-button:hover div:nth-child(2) {
-  opacity: 0;
+.content-startOrdering div{
+  display: flex;
+  flex-direction: row;
 }
 
-button:hover div:nth-child(3) {
-  transform: rotate(-45deg);
-}
 
+/*
 .background {
   height: 250px;
-  /* Ajusta la altura según tus necesidades */
   width: 100%;
-  /* Hace que el ancho sea del 100% del contenedor */
   background-image: url('../images/cover.jpg');
-  /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen */
   background-size: cover;
-  /*background-position: center;*/
   background-repeat: no-repeat;
-  /* Evita que la imagen se repita */
   overflow: hidden;
-  /*background-attachment: fixed;*/
-}
+  background-attachment: fixed;
+}*/
 
 .content1 {
   width: 100px;
@@ -169,7 +195,7 @@ button:hover div:nth-child(3) {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+/*
 footer {
   background: #ebe7e0;
   width: auto;
@@ -180,11 +206,8 @@ footer {
 
 .fotter-img {
   display: flex;
-  /* Agrega display: flex para centrar la imagen */
   align-items: center;
-  /* Centra verticalmente dentro de footer > div */
   justify-content: center;
-  /* Centra horizontalmente dentro de footer > div */
   object-fit: contain;
 }
 
@@ -203,6 +226,7 @@ footer>div>img {
   height: auto;
   min-width: 250px;
 }
+*/
 
 .footer {
   font-size: medium;
@@ -215,12 +239,12 @@ footer>div>img {
 .footer>div>div>h3 {
   display: inline-block;
   border-bottom: 2px solid #000;
-  padding-bottom: 5px;/
+  margin: 0 0;
 }
 
 .footer>div>ul>li {
   list-style-type: none;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   margin-left: 1rem;
   color: #333;
 }
@@ -233,6 +257,11 @@ footer>div>img {
 
 .footer>div>ul>li {
   text-align: start;
+  transition: all .3s ease;
+}
+
+.footer>div>ul>li:hover{
+  padding-left: 6px;
 }
 
 .footer div:nth-child(4) {
@@ -248,13 +277,18 @@ footer>div>img {
   align-items: center;
 }
 
-.social-icon img {
+.social-icon img{
   width: 32px;
   height: 32px;
   margin: 10px;
 }
 
-h6 {
+.social-icon a:hover{
+  transform: scale(1.2);
+}
+
+small {
+  display: block;
   text-align: center;
-  font-size: small;
+  padding: 10px;
 }
